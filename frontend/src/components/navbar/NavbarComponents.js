@@ -6,10 +6,10 @@ function NavbarComponents() {
         <>
             <nav>
                 <Link to="/">
-                    <h1>Logo</h1>
+                    Logo
                 </Link>
-                <Link to='/tweets'> Tweets </Link>
-                <Link to='/github'>Git Hub</Link>
+                <Link to='/timeuntil'> Time Until </Link>
+                {/* <a href='https://www.github.com' target="_blank" rel="noreferrer">Git Hub</a> */}
             </nav>
         </>
     )

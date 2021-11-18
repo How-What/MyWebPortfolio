@@ -1,0 +1,49 @@
+body{
+  background-color: #c9c9c9;
+  height: calc(100vh +8);
+}
+
+header{
+  height: 6vh;
+  display: flex;
+  align-items: center;
+}
+
+header nav{
+  display: flex;
+}
+
+header nav a{
+  padding: 0 10px;
+  margin: 0 5px;
+  font-size: 2.6vh;
+}
+
+article{
+  height: 90vh;
+}
+
+.timeUntil{
+  display: flex;
+  height: 100%;
+}
+
+.holidaySelection{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  flex-grow: 2;
+}
+
+.holidaySelection div{
+  background-color: blanchedalmond;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  font-size: 2vw;
+}
+
+.countdown{
+  width: 100vw;
+  background: linear-gradient(aliceblue, moccasin);
+}

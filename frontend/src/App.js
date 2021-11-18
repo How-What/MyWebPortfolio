@@ -1,6 +1,6 @@
 import Navbar from './components/navbar/Navbar';
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
-import Tweets from './components/tweets/Tweets';
+import TimeUntil from './components/timeuntil/TimeUntil';
 import Home from './components/home/Home';
 
 function App() {
@@ -9,17 +9,14 @@ function App() {
 
         <header>
           <Navbar/>
-          <Routes>
-            <Route path="/" exact component={<Home/>} />
-            <Route path="/tweets" exact component={<Tweets/>} />
-            <Route path="/github" exact component={ () =>
-              window.location.href = "github.com"
-            } />
-          </Routes>
+          
         </header>
-        <body>
-        
-        </body>
+        <article>
+        <Routes>
+            <Route path="/" exact element={<Home/>} />
+            <Route path="/timeuntil" exact element={<TimeUntil/>} />              
+          </Routes>
+        </article>
     </div>
   );
 }
