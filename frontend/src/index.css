@@ -43,7 +43,15 @@ article{
   font-size: 2vw;
 }
 
-.countdown{
+.countdown_container{
   width: 100vw;
   background: linear-gradient(aliceblue, moccasin);
+  font-size: 7vw;
+}
+
+.countdown_box{
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
