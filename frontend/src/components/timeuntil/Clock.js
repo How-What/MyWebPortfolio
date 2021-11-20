@@ -16,6 +16,7 @@ function Clock({holiday}) {
         setdate(new Date())
     }
 
+    //helper as defined by the holidayjs
     const stringedHoliday = (holiday) => {
         switch(holiday){
             case 'New Years':
@@ -31,6 +32,7 @@ function Clock({holiday}) {
         }
     }
     
+    //helper to build out the timer
     const timeleftString = (days, hours, minutes, seconds) => {
         return(<>
                 <div id = "day">
@@ -52,6 +54,7 @@ function Clock({holiday}) {
             </>)
     }
 
+    //main function for the math of countdown
     const getTimeLeft = (holiday) =>{
         const holidate = new Date(stringedHoliday(holiday)).getTime();
         const today_date = date
@@ -65,9 +68,10 @@ function Clock({holiday}) {
         return timeleftString(days, hours, minutes, seconds);
     }
 
-    const pad = (num) => {
-        return ('0' + num).slice(-2)
-    }
+    //orginally needed when I wanted to pad the signle digets with a zero kept for refrence
+    // const pad = (num) => {
+    //     return ('0' + num).slice(-2)
+    // }
 
     return (
         <>

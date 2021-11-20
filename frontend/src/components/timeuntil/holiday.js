@@ -1,5 +1,7 @@
 //Helpers
+// these are logic you want to get from a backend, probably will do when I make a back end
 const holidayHelper ={
+    //logic to get the fourth thursday of November
     thanksgving_day: (year = new Date().getFullYear()) => {
         const first = new Date("November 1, " + year)
         const dayOfWeek = first.getDay()
@@ -7,6 +9,7 @@ const holidayHelper ={
         return `November ${dayOfMonth}`
     },
 
+    //logic to get the next upcoming holiday if already past get next year's
     upcoming: (holidayStr) => {
         const today = new Date()
         let holiday = new Date(`${holidayStr}, ${today.getFullYear()}`)
