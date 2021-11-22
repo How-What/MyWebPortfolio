@@ -31,12 +31,12 @@ article{
 .holidaySelection{
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 25%;
   flex-grow: 2;
 }
 
 .holidaySelection div{
-  background-color: blanchedalmond;
+  background-color: rgb(245, 235, 191);
   border: 1px solid black;
   text-align: center;
   padding: 10px;
@@ -44,9 +44,17 @@ article{
 }
 
 .countdown_container{
-  width: 100vw;
-  background: linear-gradient(aliceblue, moccasin);
+  position: relative;
+  width: 100%;
   font-size: 7vw;
+  overflow: hidden;
+}
+
+
+.videobg{
+  position: absolute;
+  height: 100%;
+  z-index: -1;
 }
 
 .countdown_box{
