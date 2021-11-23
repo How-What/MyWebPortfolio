@@ -1,9 +1,6 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
-import reactDom from 'react-dom';
+import {useState} from 'react';
 import Clock from './Clock';
-import holidaylist from './holiday';
-import ForeWorksbg from './assests/fireworksbg.mp4'
 import Videobg from './Videobg';
 
 function TimeUntil() {
@@ -16,14 +13,11 @@ function TimeUntil() {
         }else{
             setshowclock(!showclock);
         }
-        if (!showclock){
-            console.log(showclock)
-            document.getElementById('countdown_container').style.backgroundColor = "rgba(255,255,255, .3)"
-        }else{
-            console.log(showclock)
-            document.getElementById('countdown_container').style.backgroundColor = "rgba(255,255,255, 0)"
-        }
         setholiday(holidayDay);
+    }
+
+    const toggleAlpha = () =>{
+        return showclock? 'rgba(255,255,255,.5)' : 'rgba(255,255,255,0)';
     }
 
     return (
@@ -42,7 +36,7 @@ function TimeUntil() {
                     <p>Halloween</p>
                 </div>
             </div>
-            <div id="countdown_container" className = 'countdown_container'>
+            <div id="countdown_container" className = 'countdown_container' style={{backgroundColor: toggleAlpha()}}>
                 {
                     showclock? <Videobg holiday={holiday}/> : null
                 }
